@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Проверка остаточных знаний</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+  <!-- Боковое меню -->
+  <aside class="sidebar">
+   <a href="index.html"><img src="pics/MP logo.png" alt="Moscow polytech" class="logo"></a>
+    <div class="profile">
+      <div class="avatar"></div>
+      <h3 class="name">Иванов<br />Иван Иванович</h3>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html" class="menu-item active">Главная</a>
+      <a href="orders.html" class="menu-item">Приказы</a>
+      <a href="#" class="menu-item">Списки рекомендуемых групп</a>
+      <a href="#" class="menu-item">Отчёты</a>
+      <a href="#" class="menu-item">Настройки доступа</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="content-box">
+      <h1 class="page-title">Главная</h1>
+
+        <div class="semester-wrapper">
+          <label for="semester" class="semester-label">Семестр:</label>
+          <select id="semester">
+            <option>1 семестр</option>
+            <option>2 семестр</option>
+          </select>
+        </div>
+
+      <table class="data-table" id="facultyTable">
+        <thead>
+          <tr>
+            <th rowspan="2">Факультеты</th>
+            <th colspan="2">Количество групп</th>
+            <th colspan="2">Количество дисциплин</th>
+            <th rowspan="2">Электронные отчёты</th>
+            <th rowspan="2">Замечания по электронному отчёту</th>
+            <th rowspan="2">Бумажные отчёты</th>
+            <th rowspan="2">Замечания по бумажному отчёту</th>
+            <th rowspan="2">
+              Всё сдано <br />
+              <span id="doneCount" class="done-counter">0</span>
+            </th>
+          </tr>
+          <tr class="sub-header">
+            <th>По нормативу</th>
+            <th>По факту</th>
+            <th>По нормативу</th>
+            <th>По факту</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ИГРИК</td><td>20</td><td>18</td><td>30</td><td>25</td><td>10</td><td>2</td><td>7</td><td>1</td>
+            <td><div class="check" onclick="toggleStatus(this)"></div></td>
+          </tr>
+          <tr>
+            <td>ИИДЖ</td><td>20</td><td>18</td><td>30</td><td>25</td><td>10</td><td>2</td><td>7</td><td>1</td>
+            <td><div class="cross" onclick="toggleStatus(this)"></div></td>
+          </tr>
+          <tr>
+            <td>ПИ</td><td>20</td><td>18</td><td>30</td><td>25</td><td>10</td><td>2</td><td>7</td><td>1</td>
+            <td><div class="check" onclick="toggleStatus(this)"></div></td>
+          </tr>
+          <tr>
+            <td>ТФ</td><td>20</td><td>18</td><td>30</td><td>25</td><td>10</td><td>2</td><td>7</td><td>1</td>
+            <td><div class="cross" onclick="toggleStatus(this)"></div></td>
+          </tr>
+          <tr>
+            <td>ФИТ</td><td>20</td><td>18</td><td>30</td><td>25</td><td>10</td><td>2</td><td>7</td><td>1</td>
+            <td><div class="cross" onclick="toggleStatus(this)"></div></td>
+          </tr>
+          <tr>
+            <td>ФМ</td><td>20</td><td>18</td><td>30</td><td>25</td><td>10</td><td>7</td><td>2</td><td>1</td>
+            <td><div class="check" onclick="toggleStatus(this)"></div></td>
+          </tr>
+          <tr>
+            <td>ФУЛГХ</td><td>20</td><td>18</td><td>30</td><td>25</td><td>10</td><td>7</td><td>2</td><td>1</td>
+            <td><div class="cross" onclick="toggleStatus(this)"></div></td>
+          </tr>
+          <tr>
+            <td>ФХТИБ</td><td>20</td><td>18</td><td>30</td><td>25</td><td>10</td><td>7</td><td>2</td><td>1</td>
+            <td><div class="check" onclick="toggleStatus(this)"></div></td>
+          </tr>
+          <tr>
+            <td>ФЭИУ</td><td>20</td><td>18</td><td>30</td><td>25</td><td>10</td><td>7</td><td>2</td><td>1</td>
+            <td><div class="check" onclick="toggleStatus(this)"></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </main>
+</body>
+</html>

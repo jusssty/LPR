@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Приказы — Проверка остаточных знаний</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+  <!-- меню -->
+  <aside class="sidebar">
+    <a href="index.html"><img src="pics/MP logo.png" alt="Moscow Polytech" class="logo"></a>
+    <div class="profile">
+      <div class="avatar"></div>
+      <h3 class="name">Иванов<br />Иван Иванович</h3>
+    </div>
+
+    <nav class="menu">
+      <a href="index.html" class="menu-item">Главная</a>
+      <a href="orders.html" class="menu-item active">Приказы</a>
+      <a href="#" class="menu-item">Списки рекомендуемых групп</a>
+      <a href="#" class="menu-item">Отчёты</a>
+      <a href="#" class="menu-item">Настройки доступа</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <div class="content-box">
+      <h1 class="page-title">Приказы</h1>
+
+      <div class="controls">
+        <div class="view-toggle">
+          <button class="toggle-btn active" id="tableViewBtn" title="Табличный вид">
+            <img src="table-view.svg" alt="Таблица" />
+          </button>
+          <button class="toggle-btn" id="listViewBtn" title="Списочный вид">
+            <img src="list-view.svg" alt="Список" />
+          </button>
+        </div>
+
+        <div class="date-filter">
+          <label for="yearFilter">Учебный год:</label>
+          <select id="yearFilter">
+            <option value="all">Все</option>
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+          </select>
+
+          <label for="semesterFilter">Семестр:</label>
+          <select id="semesterFilter">
+            <option value="all">Все</option>
+            <option value="Весна">1</option>
+            <option value="Осень">2</option>
+          </select>
+        </div>
+
+        <button class="create-btn">+ Сформировать новый приказ</button>
+        <button class="drafts-btn">Черновики</button>
+      </div>
+
+      <div class="search-wrapper">
+        <input type="text" class="search-input" id="searchInput" placeholder="Введите сюда" />
+      </div>
+
+      <!-- таблица -->
+      <div id="tableView" class="view-mode active">
+        <table class="orders-table" id="ordersTable">
+          <thead>
+            <tr>
+              <th>№ п/п</th>
+              <th>Название</th>
+              <th>Учебный год</th>
+              <th>Семестр</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr data-year="2025" data-semester="1">
+              <td>001</td>
+              <td><a href="#">Приказ "О проведении анкетирования и проверки остаточных знаний..."</a></td>
+              <td>2025</td>
+              <td>1</td>
+            </tr>
+            <tr data-year="2025" data-semester="1">
+              <td>002</td>
+              <td><a href="#">Приказ "О проведении анкетирования и проверки остаточных знаний..."</a></td>
+              <td>2025</td>
+              <td>1</td>
+            </tr>
+            <tr data-year="2025" data-semester="2">
+              <td>003</td>
+              <td><a href="#">Приказ "О промежуточной аттестации и проверке знаний студентов..."</a></td>
+              <td>2025</td>
+              <td>2</td>
+            </tr>
+            <tr data-year="2025" data-semester="2">
+              <td>004</td>
+              <td><a href="#">Приказ "О проведении экзаменационной сессии..."</a></td>
+              <td>2025</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- список приказов -->
+      <div id="listView" class="view-mode">
+        <details class="order-item" data-year="2025" data-semester="1">
+          <summary>
+            Приказ “О проведении анкетирования и проверки остаточных знаний обучающихся” №000 от 12.12.12
+          </summary>
+          <div class="order-details">
+            <p><strong>Учебный год:</strong> 2025</p>
+            <p><strong>Семестр:</strong> 1</p>
+            <p><strong>Описание:</strong> Проведение анкетирования и контроль остаточных знаний по дисциплинам весеннего семестра.</p>
+          </div>
+        </details>
+
+        <details class="order-item" data-year="2025" data-semester="1">
+          <summary>
+            Приказ “О промежуточной аттестации обучающихся” №001 от 05.09.24
+          </summary>
+          <div class="order-details">
+            <p><strong>Учебный год:</strong> 2025</p>
+            <p><strong>Семестр:</strong> 1</p>
+            <p><strong>Описание:</strong> Проведение промежуточной аттестации студентов в осеннем семестре.</p>
+          </div>
+        </details>
+
+        <details class="order-item" data-year="2025" data-semester="2">
+          <summary>
+            Приказ “О проведении экзаменационной сессии” №002 от 10.03.24
+          </summary>
+          <div class="order-details">
+            <p><strong>Учебный год:</strong> 2025</p>
+            <p><strong>Семестр:</strong> 2</p>
+            <p><strong>Описание:</strong> Организация экзаменационной сессии в весеннем семестре.</p>
+          </div>
+        </details>
+
+        <details class="order-item" data-year="2025" data-semester="1">
+          <summary>
+            Приказ “О проведении экзаменационной сессии” №002 от 10.03.24
+          </summary>
+          <div class="order-details">
+            <p><strong>Учебный год:</strong> 2025</p>
+            <p><strong>Семестр:</strong> 1</p>
+            <p><strong>Описание:</strong> Организация экзаменационной сессии в весеннем семестре.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <script src="scripts/orders.js"></script>
+  </main>
+</body>
+</html>

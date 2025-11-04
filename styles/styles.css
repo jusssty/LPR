@@ -1,0 +1,393 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background: linear-gradient(180deg, #6d86e4 0%, #ffffff 100%);
+  color: #272727;
+  display: flex;
+  height: 100vh;
+}
+
+/* меню */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  border-radius: 0 20px 20px 0;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.profile {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background-color: #ededed;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+nav.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.menu-item {
+  font-weight: 700;
+  text-decoration: none;
+  color: #272727;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.menu-item:hover {
+  background: #ededf9;
+  color: #5b73bf;
+}
+
+.menu-item.active {
+  color: #6d86e4;
+}
+
+.menu-item.active::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #6d86e4;
+  border-radius: 50%;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* рамка */
+.content-box {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  padding: 25px 40px;
+  width: 80%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+.semester-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+/* заголовок */
+.page-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 20px 0 20px 0;
+  align-self: flex-start;
+}
+
+.semester-label {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+select {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  background: #ededed;
+  border-radius: 12px;
+  padding: 14px 20px;
+  color: #272727;
+  appearance: none;
+  width: 220px;
+  text-align: center;
+  background-image: url("data:image/svg+xml;charset=UTF-8,<svg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'><path d='M1 1l5 5 5-5' stroke='%23525252' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  cursor: pointer;
+}
+
+/* табица */
+.data-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 14px;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 12px;
+  overflow: hidden;
+  word-wrap: break-word; 
+}
+
+th, td {
+  border: 1px solid #dbdbdb;
+  padding: 8px 10px;
+}
+
+th {
+  background-color: #ededf9;
+  font-weight: 700;
+}
+
+.sub-header {
+  font-weight: 500;
+  font-size: 11px;
+  color: #525252;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ededf9;
+}
+
+.check, .cross {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.check {
+  background-color: #6d86e4;
+}
+
+.cross {
+  background-color: #e56a6a;
+}
+
+.done-counter {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #6d86e4;
+  margin-top: 4px;
+}
+
+/* приказы */
+
+.create-btn {
+  background-color: #6d86e4;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.create-btn:hover {
+  background-color: #5b73bf;
+}
+
+.drafts-btn {
+  background-color: #c8b4f3;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.drafts-btn:hover {
+  background-color: #a48ee0;
+}
+
+.search-wrapper {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #dbdbdb;
+  border-radius: 12px;
+  font-size: 14px;
+  background: #f9f9f9;
+}
+
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #dbdbdb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+  border: 1px solid #dbdbdb;
+  padding: 12px;
+  text-align: left;
+}
+
+.orders-table th {
+  background: #ededf9;
+  font-weight: 700;
+}
+
+.orders-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.orders-table a {
+  color: #272727;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.orders-table a:hover {
+  color: #6d86e4;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 8px;
+  margin-right: auto;
+}
+
+.toggle-btn {
+  background: #ededf9;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.toggle-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.toggle-btn.active {
+  background: #6d86e4;
+}
+
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.date-filter label {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.date-filter select {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  background: #ededed;
+  border-radius: 10px;
+  padding: 8px 12px;
+  color: #272727;
+  cursor: pointer;
+}
+
+/* для списка */
+.view-mode {
+  display: none;
+}
+
+.view-mode.active {
+  display: block;
+}
+
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-left: 5px solid #6d86e4;
+  border-radius: 10px;
+  padding: 18px 24px;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.order-card:hover {
+  background: #f4f6ff;
+  border-left-color: #5b73bf;
+}
+
+.order-card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #6d86e4;
+  flex: 0 0 120px;
+}
+
+.order-card p {
+  flex: 1;
+  font-size: 14px;
+  color: #272727;
+  margin: 0 20px;
+}
+
+.order-card span {
+  flex: 0 0 100px;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 600;
+  color: #525252;
+}
