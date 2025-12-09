@@ -495,3 +495,13 @@ tbody tr:nth-child(even) {
   font-weight: 700;
   color: #525252;
 }
+
+.details-row {
+  display: none;
+}
+
+body {
+  transform: scale(0.9);
+  transform-origin: top left;
+  width: 111.111%;
+}
